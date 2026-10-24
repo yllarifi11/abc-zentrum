@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ABC Zentrum - Kurse të gjuhës gjermane A1, A2, B1, B2 dhe shërbime përkthimi.">
+  <title>ABC Zentrum | Kurse Gjermanisht</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root {
+      --red: #d93643;
+      --yellow: #f2c14e;
+      --dark: #18191c;
+      --text: #25262b;
+      --muted: #737680;
+      --light: #f7f7f8;
+      --border: #e8e8eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: white;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    .flag-line {
+      height: 4px;
+      background: linear-gradient(
+        to right,
+        #191919 0 33.33%,
+        var(--red) 33.33% 66.66%,
+        var(--yellow) 66.66%
+      );
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .logo-mark {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: var(--red);
+      color: white;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .logo-name {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -.6px;
+      line-height: 1.2;
+    }
+
+    .logo-subtitle {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: #55565d;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .btn-red {
+      color: white;
+      background: var(--red);
+    }
+
+    .btn-red:hover {
+      background: #bd2935;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border-color: #dcdce1;
+      background: white;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 85px 0;
+      background: #fafafa;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--red);
+      background: #fff0f1;
+      padding: 6px 11px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 58px);
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: var(--red);
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 510px;
+      margin-bottom: 27px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .hero-note {
+      margin-top: 22px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-note i {
+      color: #3c9764;
+      margin-right: 5px;
+    }
+
+    .hero-card {
+      padding: 29px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 12px 35px rgba(0,0,0,.045);
+    }
+
+    .hero-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .hero-card-top h2 {
+      font-size: 19px;
+    }
+
+    .flag {
+      width: 31px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .flag div {
+      height: 7px;
+    }
+
+    .flag div:nth-child(1) { background: #171717; }
+    .flag div:nth-child(2) { background: #dd2636; }
+    .flag div:nth-child(3) { background: #f2c14e; }
+
+    .level-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .level {
+      padding: 20px 14px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+
+    .level strong {
+      display: block;
+      font-size: 23px;
+      color: var(--red);
+      margin-bottom: 4px;
+    }
+
+    .level span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .hero-card-bottom {
+      margin-top: 21px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-card-bottom i {
+      color: var(--red);
+      margin-right: 7px;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      max-width: 620px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2,
+    .contact-copy h2 {
+      font-size: clamp(29px, 4vw, 38px);
+      letter-spacing: -1px;
+      margin-bottom: 13px;
+    }
+
+    .section-heading p,
+    .contact-copy > p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* COURSES */
+
+    .courses {
+      background: white;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .course-card {
+      padding: 24px 20px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .course-card:hover {
+      border-color: #e6a1a6;
+      transform: translateY(-3px);
+    }
+
+    .course-code {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #fff0f1;
+      color: var(--red);
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .course-card h3 {
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .course-card p {
+      color: var(--muted);
+      font-size: 12px;
+      min-height: 64px;
+    }
+
+    .course-card a {
+      display: inline-block;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 17px;
+    }
+
+    .course-card a i {
+      margin-left: 5px;
+    }
+
+    /* TRANSLATIONS */
+
+    .translations {
+      background: var(--light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .translation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .translation-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .translation-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      background: #fff0f1;
+      color: var(--red);
+      border-radius: 9px;
+      margin-bottom: 18px;
+    }
+
+    .translation-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .translation-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .direction {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .direction span {
+      padding: 7px 10px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .direction i {
+      color: var(--red);
+      font-size: 12px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-copy > p {
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: #fff0f1;
+      color: var(--red);
+      border-radius: 9px;
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .contact-item strong {
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item a:hover {
+      color: var(--red);
+    }
+
+    .contact-panel {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px;
+    }
+
+    .contact-panel h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .contact-panel > p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 19px;
+    }
+
+    .map-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 9px;
+      margin-bottom: 14px;
+    }
+
+    .map-box > i {
+      color: var(--red);
+      font-size: 24px;
+    }
+
+    .map-box strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .map-box span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .map-button {
+      width: 100%;
+    }
+
+    .social-heading {
+      margin: 23px 0 12px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-link {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 8px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 26px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .footer-copy {
+      color: #b5b6bd;
+      font-size: 11px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 9px;
+    }
+
+    .footer-socials a {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #393a40;
+      border-radius: 7px;
+      color: white;
+    }
+
+    .footer-socials a:hover {
+      color: var(--yellow);
+      border-color: var(--yellow);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero-grid {
+        gap: 30px;
+      }
+
+      .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-contact {
+        display: none;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 12px 5% 18px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links a {
+        padding: 11px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 35px;
+      }
+
+      h1 {
+        font-size: 43px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .contact-grid {
+        gap: 30px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .course-grid,
+      .translation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .course-card p {
+        min-height: auto;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-card {
+        padding: 22px;
+      }
+
+      .translation-card,
+      .contact-panel {
+        padding: 21px;
+      }
+
+      .social-links {
+        flex-direction: column;
+      }
+
+      .footer-copy {
+        line-height: 1.8;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flag-line"></div>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="#ballina">
+        <div class="logo-mark">ABC</div>
+        <div>
+          <div class="logo-name">ABC Zentrum</div>
+          <span class="logo-subtitle">Gjuha gjermane</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#ballina">Ballina</a>
+        <a href="#kurset">Kurset</a>
+        <a href="#perkthimet">Përkthimet</a>
+        <a href="#kontakti">Kontakti</a>
+      </nav>
+
+      <a class="btn btn-red nav-contact" href="tel:045528400">
+        <i class="fa-solid fa-phone"></i>
+        045-528-400
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Hap menynë" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="ballina">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Mirë se vini në ABC Zentrum</div>
+
+          <h1>
+            Mëso gjermanisht.<br>
+            <span class="highlight">Hap mundësi të reja.</span>
+          </h1>
+
+          <p class="hero-description">
+            Kurse të gjuhës gjermane për nivelet A1, A2, B1 dhe B2,
+            si dhe përkthime Shqip–Gjermanisht dhe Gjermanisht–Shqip.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-red" href="#kurset">
+              Shiko kurset <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-outline" href="#kontakti">
+              Na kontakto
+            </a>
+          </div>
+
+          <p class="hero-note">
+            <i class="fa-solid fa-check-circle"></i>
+            Kurse gjuhësore dhe shërbime përkthimi
+          </p>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <h2>Nivelet e kurseve</h2>
+            <div class="flag" aria-label="Flamuri i Gjermanisë">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+          <div class="level-grid">
+            <div class="level">
+              <strong>A1</strong>
+              <span>Fillestar</span>
+            </div>
+            <div class="level">
+              <strong>A2</strong>
+              <span>Njohuri bazë</span>
+            </div>
+            <div class="level">
+              <strong>B1</strong>
+              <span>I ndërmjetëm</span>
+            </div>
+            <div class="level">
+              <strong>B2</strong>
+              <span>Më i avancuar</span>
+            </div>
+          </div>
+
+          <div class="hero-card-bottom">
+            <i class="fa-solid fa-language"></i>
+            Përkthime në të dy drejtimet
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="courses" id="kurset">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Kurset tona</div>
+          <h2>Zgjedh nivelin tënd</h2>
+          <p>
+            Zbulo nivelin që të përshtatet dhe kontakto qendrën
+            për informata rreth regjistrimit.
+          </p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card">
+            <div class="course-code">A1</div>
+            <h3>Fillestar</h3>
+            <p>Mëso fjalët dhe shprehjet bazë për komunikimin e përditshëm.</p>
+            <a href="#kontakti">Më shumë informata <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-code">A2</div>
+            <h3>Njohuri bazë</h3>
+            <p>Zhvillo aftësitë për biseda dhe situata të zakonshme.</p>
+            <a href="#kontakti">Më shumë informata <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-code">B1</div>
+            <h3>I ndërmjetëm</h3>
+            <p>Përmirëso komunikimin dhe kuptimin e gjuhës gjermane.</p>
+            <a href="#kontakti">Më shumë informata <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-code">B2</div>
+            <h3>Më i avancuar</h3>
+            <p>Zgjero fjalorin dhe zhvillo komunikimin në situata më komplekse.</p>
+            <a href="#kontakti">Më shumë informata <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="translations" id="perkthimet">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">Shërbimet tona</div>
+          <h2>Shërbime përkthimi</h2>
+          <p>
+            Përkthime në të dy drejtimet. Na kontakto për detaje
+            rreth dokumenteve dhe shërbimit që të nevojitet.
+          </p>
+        </div>
+
+        <div class="translation-grid">
+          <article class="translation-card">
+            <div class="translation-icon">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <h3>Shqip → Gjermanisht</h3>
+            <p>
+              Përkthime nga gjuha shqipe në gjuhën gjermane.
+              Kontakto për informata rreth shërbimit.
+            </p>
+            <div class="direction">
+              <span>Shqip</span>
+              <i class="fa-solid fa-arrow-right"></i>
+              <span>Gjermanisht</span>
+            </div>
+            <a class="btn btn-red" href="tel:045528400">
+              <i class="fa-solid fa-phone"></i> Na telefono
+            </a>
+          </article>
+
+          <article class="translation-card">
+            <div class="translation-icon">
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <h3>Gjermanisht → Shqip</h3>
+            <p>
+              Përkthime nga gjuha gjermane në gjuhën shqipe.
+              Kontakto për informata rreth shërbimit.
+            </p>
+            <div class="direction">
+              <span>Gjermanisht</span>
+              <i class="fa-solid fa-arrow-right"></i>
+              <span>Shqip</span>
+            </div>
+            <a class="btn btn-red" href="tel:045528400">
+              <i class="fa-solid fa-phone"></i> Na telefono
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakti">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <div class="section-label">Kontakti</div>
+          <h2>Na kontakto</h2>
+          <p>
+            Për informata rreth kurseve, regjistrimit ose përkthimeve,
+            na telefono ose na vizito në adresën tonë.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <small>Telefoni</small>
+              <a href="tel:045528400"><strong>045-528-400</strong></a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <small>Adresa</small>
+              <strong>Rruga Adem Jashari 42</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3>Ku gjendemi?</h3>
+          <p>Hape hartën për të kërkuar adresën e ABC Zentrum.</p>
+
+          <div class="map-box">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <div>
+              <strong>ABC Zentrum</strong>
+              <span>Rruga Adem Jashari 42</span>
+            </div>
+          </div>
+
+          <a
+            class="btn btn-red map-button"
+            href="https://www.google.com/maps/search/?api=1&query=Rruga%20Adem%20Jashari%2042%2C%20Gjilan%2C%20Kosovo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-solid fa-location-arrow"></i>
+            Hap në Google Maps
+          </a>
+
+          <div class="social-heading">Na gjej edhe në rrjete sociale</div>
+
+          <div class="social-links">
+            <a
+              class="social-link"
+              href="https://www.facebook.com/abczentrumgjilan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+
+            <a
+              class="social-link"
+              href="https://www.instagram.com/abczentrumgjilan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="#ballina" class="footer-brand">ABC Zentrum</a>
+
+      <div class="footer-copy">
+        © <span id="year"></span> ABC Zentrum. Të gjitha të drejtat e rezervuara.
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/abczentrumgjilan/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/abczentrumgjilan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Viti aktual
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menuja për telefon
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const menuIcon = menuToggle.querySelector("i");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuIcon.className = isOpen
+        ? "fa-solid fa-xmark"
+        : "fa-solid fa-bars";
+    });
+
+    // Mbyll menynë pasi klikohet një lidhje
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuIcon.className = "fa-solid fa-bars";
+      });
+    });
+  </script>
+</body>
+</html>
